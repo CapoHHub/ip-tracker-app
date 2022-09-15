@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&family=Manrope:wght@800&family=Rubik:wght@400;500;700&family=Satisfy&display=swap");
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Rubik", sans-serif;
+}
+
+/* HEADER */
+
+.pattern {
+  height: 335px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./assets/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.pattern h1 {
+  font-weight: 500;
+  color: white;
+  margin: 35px 0;
+}
+
+.pattern .nav-bar {
+  width: 600px;
+  height: 60px;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.nav-bar input {
+  color: gray;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 18px;
+  width: 87%;
+  border: none;
+  outline: none;
+}
+
+.nav-bar .enter-btn {
+  width: 11%;
+  height: 100%;
+  background-color: hsl(0, 0%, 0%);
+  border-radius: 0 15px 15px 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  border: none;
+  cursor: pointer;
+}
+
+.enter-btn:hover {
+  background-color: hsl(0, 0%, 17%);
+}
+
+/* INFO-CONTAINER */
+
+.info-container {
+  width: 70vw;
+  height: 200px;
+  position: absolute;
+  background-color: white;
+  right: auto;
+  left: auto;
+  bottom: -100px;
+  border-radius: 20px;
+  border: 1px solid black;
+  /* GRID */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  padding: 30px;
+  gap: 15px;
+  z-index: 10;
+}
+
+.info-container div {
+  position: relative;
+}
+
+.info-container div:after {
+  content: "";
+  display: block;
+  background-color: gray;
+  height: 100px;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.info-container div:nth-child(4):after {
+  display: none;
+}
+
+.info-container div p {
+  color: gray;
+  font-weight: 500;
+}
+
+.info-container div h1 {
+  color: black;
+  font-size: 2em;
+  word-wrap: break-word;
+}
+
+/* MAP */
+
+#map {
+  height: calc(100vh - 335px);
+  width: 100vw;
+}
