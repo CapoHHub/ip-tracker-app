@@ -47,7 +47,7 @@ body {
 }
 
 .nav-bar input {
-  color: gray;
+  color: hsl(0, 0%, 59%);
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 18px;
@@ -90,21 +90,23 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   padding: 30px;
-  gap: 15px;
+  gap: 50px;
   z-index: 10;
   box-shadow: 0 0 30px black;
 }
 
 .info-container div {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .info-container div:after {
   content: "";
   display: block;
-  background-color: gray;
+  background-color: hsl(0, 0%, 59%);
   height: 100px;
-  width: 1px;
+  width: 0.5px;
   position: absolute;
   right: 0;
   top: 20px;
@@ -115,14 +117,16 @@ body {
 }
 
 .info-container div p {
-  color: gray;
+  color: hsl(0, 0%, 59%);
   font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .info-container div h1 {
-  color: black;
+  color: hsl(0, 0%, 17%);
   font-size: 2em;
   word-wrap: break-word;
+  margin-top: 15px;
 }
 
 /* MAP */
@@ -132,4 +136,52 @@ body {
   width: 100vw;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 375px) {
+  .info-container {
+    height: 350px;
+    width: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+    top: 150px;
+    padding: 15px;
+    padding-left: 30px;
+  }
+
+  .pattern {
+    height: 250px;
+  }
+
+  .info-container div:after {
+    display: none;
+  }
+
+  .info-container div h1 {
+    font-size: 20px;
+  }
+
+  .info-container div p {
+    font-size: 12px;
+  }
+
+  .pattern h1 {
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .pattern .nav-bar {
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+  }
+
+  .nav-bar input {
+    font-size: 14px;
+  }
+
+  #map {
+    height: calc(100vh - 250px);
+  }
 }
