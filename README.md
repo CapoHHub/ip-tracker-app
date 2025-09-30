@@ -1,5 +1,6 @@
-# ip-tracker-app
+# IP-TRACKER-APP
 
+Made with vanilla HTML, CSS and JavaScript
 IP tracker app made with "https://geo.ipify.org/" and "https://geo.ipify.org/" APIs
 
 ***IMPORTANT: BEFORE USING THE APP DISABLE ALL AD BLOCKERS***
